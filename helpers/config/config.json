@@ -37,5 +37,6 @@
             "Employee4": "5:00-23:30",
             "Employee5": "5:00-23:00"
         }
-    }
+    },
+    "WEEKS_PER_SCHEDULE": 1
 }
