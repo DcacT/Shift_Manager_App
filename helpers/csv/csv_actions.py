@@ -22,6 +22,7 @@ def read_csv_to_list(file_path):
 
 def generate_empty_availability_data(start_from_scratch = False):
     # read configuration
+    print('GENERATING AVAILABILITY DATA')
     OPERATION_TIME = config_actions.read_cfg(key='OPERATION_TIME')
     EMPLOYEE_LIST = config_actions.read_cfg(key='EMPLOYEE_LIST')
     # generate column list
@@ -38,14 +39,42 @@ def generate_empty_availability_data(start_from_scratch = False):
         ROW = [t]
         
         for person in EMPLOYEE_LIST:
-            if t[0:3] is 'EMP':    
+            if t[0:3] == 'EMP':    
                 ROW.append(person)
             else:    
                 if start_from_scratch:
                     ROW.append('O')
         AVAILABILITY_DATA.append(ROW)
-        print(ROW)
-    print(AVAILABILITY_DATA)                
+    print(AVAILABILITY_DATA)
+    return AVAILABILITY_DATA               
+
+def write_availability_data(data, file_name):
+    with open("output.csv", "w", newline="") as file:
+        writer = csv.writer(file)
+        writer.writerows(data)
+
+def get_employee_index(employee_name):
+    EMPLOYEE_LIST = config_actions.read_cfg(key='EMPLOYEE_LIST')
+    employee_index = EMPLOYEE_LIST.index(employee_name)
+    return employee_index + 1
+
+def get_time_index(data, day, time):
+    time_title = f"{day}_{time}"
+    column_one = [row[0] for row in data]
+    time_index = column_one.index(time_title)
+    return  time_index
+
+def modify_availability_data (data, employee_index, time_index, availability = False):
+    data[time_index][employee_index] = availability
+
+    return data
+
+def range_modify_availability_data(data, employee_index, start_time_index, end_time_index, availability = False):
+    while start_time_index<=end_time_index:
+        modify_availability_data(data=data, employee_index=employee_index, time_index=start_time_index, availability=availability)
+        start_time_index+=1
+    return data
+
 
 # def setup_cfg(values=default_values):
 #     if os.path.exists(CFG_PATH): #delete if exist
