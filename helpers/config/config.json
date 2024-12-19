@@ -38,5 +38,6 @@
             "Employee5": "5:00-23:00"
         }
     },
-    "WEEKS_PER_SCHEDULE": 1
+    "WEEKS_PER_SCHEDULE": 1,
+    "NEXT_SCHEDULE_DATE": "2024_12_23"
 }
