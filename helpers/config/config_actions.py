@@ -37,7 +37,7 @@ default_values = {
         'title':Default_Shift_Pattern
     },
     'WEEKS_PER_SCHEDULE': 1,
-
+    'NEXT_SCHEDULE_DATE':'2024_12_23'
 }
 
 
