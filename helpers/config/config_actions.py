@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv, set_key, dotenv_values
 import json
+from datetime import datetime, timedelta
 from . import  get_cfg_path, CFG_PATH
 roles_list = ['inactive', 'employee', 'manager', 'owner']
 
@@ -30,6 +31,7 @@ default_values = {
         "INTERVALS":30, 
         "INTERVALS_COUNT":26, # intervals_count = (datetime.strptime(OPERATION_TIME.END_TIME)-datetime.strptime(OPERATION_TIME.START_TIME)).total_seconds() / 60 //OPERATION_TIME.INTERVALS
     },
+    'TIME_SLOT_LIST':[],
     'MANAGER_LIST': [],
     'EMPLOYEE_LIST':['Steve', 'Steven'],
     'roles':roles_list,
@@ -63,15 +65,29 @@ def write_cfg(key, val):
         json.dump(data, f, indent=4)
 
 
-def setup_cfg(values=default_values):
+def setup_cfg(values=default_values, time_slot_list = None):
     if os.path.exists(CFG_PATH): #delete if exist
         os.remove(CFG_PATH)
         print(f"{CFG_PATH} existed and was deleted.")
     
+    values['TIME_SLOT_LIST'] = generate_time_slot_list(values) if time_slot_list == None else time_slot_list
+    
     with open(CFG_PATH, 'w') as f:
-        json.dump(default_values, f, indent=4)
+        json.dump(values, f, indent=4)
     print(f"{CFG_PATH} created with default values.")
     
+def generate_time_slot_list(data = None):
+    OPERATION_TIME = read_cfg(key='OPERATION_TIME') if data == None else data['OPERATION_TIME']
+    print(OPERATION_TIME)
+    TIME_SLOT_LIST = ['EMPLOYEE']
+    for day in OPERATION_TIME['DAYS']:
+        if day in ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']:
+            for i in range(OPERATION_TIME['INTERVALS_COUNT']):
+                start_time = datetime.strptime(OPERATION_TIME['START_TIME'], '%H:%M')
+                current_time = start_time + timedelta(minutes=OPERATION_TIME['INTERVALS'] * i)
+                cuurent_time_string = datetime.strftime(current_time, '%H:%M')
+                TIME_SLOT_LIST.append(f"{day}_{cuurent_time_string}")
+    return TIME_SLOT_LIST
 
 
 
