@@ -30,30 +30,25 @@ def get_this_availability_sheet_name():
     new_date_str = (datetime.strptime(date_str, f"%y_%m_%d") - timedelta(days=7)).strftime(f"%y_%m_%d")
     return os.path.join(dir_path, f"AVAILABILITY_{new_date_str}.csv")
 
+
+
 def generate_empty_availability_data(start_from_scratch = False):
     # read configuration
     print('GENERATING AVAILABILITY DATA')
-    OPERATION_TIME = config_actions.read_cfg(key='OPERATION_TIME')
+    TIME_SLOT_LIST = config_actions.read_cfg(key='TIME_SLOT_LIST')
     EMPLOYEE_LIST = config_actions.read_cfg(key='EMPLOYEE_LIST')
     # generate column list
-    COLUMN = ['EMPLOYEE']
-    for day in OPERATION_TIME['DAYS']:
-        if day in ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']:
-            for i in range(OPERATION_TIME['INTERVALS_COUNT']):
-                start_time = datetime.strptime(OPERATION_TIME['START_TIME'], '%H:%M')
-                current_time = start_time + timedelta(minutes=OPERATION_TIME['INTERVALS'] * i)
-                cuurent_time_string = datetime.strftime(current_time, '%H:%M')
-                COLUMN.append(f"{day}_{cuurent_time_string}")
-    AVAILABILITY_DATA = []
-    for t in COLUMN:
+
+    AVAILABILITY_DATA = [TIME_SLOT_LIST[0]] + EMPLOYEE_LIST
+    print(AVAILABILITY_DATA)
+    for t in TIME_SLOT_LIST[1:]:
         ROW = [t]
         
         for person in EMPLOYEE_LIST:
-            if t[0:3] == 'EMP':    
-                ROW.append(person)
-            else:    
-                if start_from_scratch:
-                    ROW.append('O')
+            if start_from_scratch:
+                ROW.append('O')
+            else:
+                print('TODO')
         AVAILABILITY_DATA.append(ROW)
     # print(AVAILABILITY_DATA)
     return AVAILABILITY_DATA               
