@@ -17,8 +17,8 @@ Default_Shift_Pattern = {
 default_employee_base = {
     'NAME': "Steve",
     'ROLE': "employee",
-    'Desired_Shift_Counts':"0"
-    
+    'Desired_Shift_Counts':"0",
+    'Priority':'-1' # 0 is standard, -1 is to use as least as possible. max out at 5. 
 }
 default_values = {
     'BOT_KEY': 'default_api_key',
@@ -33,9 +33,9 @@ default_values = {
     },
     'TIME_SLOT_LIST':[],
     'MANAGER_LIST': [],
-    'EMPLOYEE_LIST':['Steve', 'Steven'],
-    'roles':roles_list,
-    'Shift_Patterns':{
+    'EMPLOYEE_LIST':[],
+    'ROLES_LIST':roles_list,
+    'SHIFT_PATTERNS':{
         'title':Default_Shift_Pattern
     },
     'WEEKS_PER_SCHEDULE': 1,
@@ -50,8 +50,7 @@ def check_cfg():
 def read_cfg(key=None):
     with open(CFG_PATH, 'r') as f:
         data = json.load(f)
-
-    if key and key in data:
+    if key is not None and key in data:
         return data[key]
     return data
 
