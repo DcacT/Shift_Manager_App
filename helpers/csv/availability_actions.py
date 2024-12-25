@@ -27,7 +27,7 @@ def get_next_availability_sheet_name():
 
 def get_this_availability_sheet_name():
     date_str = config_actions.read_cfg('NEXT_SCHEDULE_DATE')
-    new_date_str = (datetime.strptime(date_str, f"%y_%m_%d") - timedelta(days=7)).strftime(f"%y_%m_%d")
+    new_date_str = (datetime.strptime(date_str, f"%Y_%m_%d") - timedelta(days=7)).strftime(f"%Y_%m_%d")
     return os.path.join(dir_path, f"AVAILABILITY_{new_date_str}.csv")
 
 

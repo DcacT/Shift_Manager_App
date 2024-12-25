@@ -1,12 +1,14 @@
 import os
 from .helpers.config import config_actions, employee_action
-from .helpers.csv import availability_actions
+from .helpers.csv import availability_actions, visualizer
 
 def onStart():
     config_actions.setup_cfg()
     data = availability_actions.generate_empty_availability_data(start_from_scratch=True)
     availability_actions.write_availability_data(data, 'new_sample.csv')
-
+    df = visualizer.display_df()
+    visualizer.save_df_to_html(df)
+    print(df)
 #config_handler
 
 #availability_handler
@@ -17,12 +19,13 @@ def onStart():
 #employee_handler
 default_employee_base = {
     'NAME': "Steve",
+    'DC_ID':'qwer',
     'ROLE': "employee",
     'Desired_Shift_Counts':"0",
     'Priority':'-1' # 0 is standard, -1 is to use as least as possible. max out at 5. 
 }
 def handle_employee():
-    command = input('Employee command?')
+    command = input('Employee command: ')
     if command == 'show':
         employee_action.show_employee()
     elif command == 'new':
@@ -44,15 +47,17 @@ def handle_employee():
             
             while True:
                 try:
-                    shift_count = int(input("Desired Shifts Count Per Week : "))
+                    shift_count = int(input("Desired Shifts Count Per Week: "))
                     break
                 except ValueError:
                     print("That's not an integer. Try again.")
 
+            DC_ID = input('Discord ID: ')
             priority = 0
-         
+          
             new_employee = {
                 'NAME': name,
+                'DC_ID':DC_ID,
                 'ROLE': role,
                 'Desired_Shift_Counts':shift_count,
                 'Priority':priority # 0 is standard, -1 is to use as least as possible. max out at 5. 
@@ -64,6 +69,7 @@ def handle_employee():
         employee_action.delete_employee(NAME = input('Delete Employee Name: '))
         return
     elif command == 'edit':
+
         return  
     else: 
         print('unrecognized availability command')
@@ -89,7 +95,7 @@ def handle_commands():
             elif command.startswith("!shift"):
                 handle_employee()
             
-            elif command.startswith("!Employee"):
+            elif command.startswith("!employee"):
                 handle_employee()
 
             else:

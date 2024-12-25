@@ -203,7 +203,29 @@
         "SUN_23:00"
     ],
     "MANAGER_LIST": [],
-    "EMPLOYEE_LIST": [],
+    "EMPLOYEE_LIST": [
+        {
+            "NAME": "Steve",
+            "DC_ID": "qwer",
+            "ROLE": "employee",
+            "Desired_Shift_Counts": 3,
+            "Priority": 0
+        },
+        {
+            "NAME": "Peter",
+            "DC_ID": "asdf",
+            "ROLE": "employee",
+            "Desired_Shift_Counts": 1,
+            "Priority": 0
+        },
+        {
+            "NAME": "Jordan",
+            "DC_ID": "zxcv",
+            "ROLE": "owner",
+            "Desired_Shift_Counts": 3,
+            "Priority": 0
+        }
+    ],
     "ROLES_LIST": [
         "inactive",
         "employee",

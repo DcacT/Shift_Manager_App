@@ -5,6 +5,27 @@ from datetime import datetime, timedelta
 from . import  get_cfg_path, CFG_PATH
 roles_list = ['inactive', 'employee', 'manager', 'owner']
 
+Mock_Employee_List = [{
+            "NAME": "Steve",
+            "DC_ID":"qwer",
+            "ROLE": "employee",
+            "Desired_Shift_Counts": 3,
+            "Priority": 0
+        },
+        {
+            "NAME": "Peter",
+            "DC_ID":"asdf",
+            "ROLE": "employee",
+            "Desired_Shift_Counts": 1,
+            "Priority": 0
+        },
+        {
+            "NAME": "Jordan",
+            "DC_ID":"zxcv",
+            "ROLE": "owner",
+            "Desired_Shift_Counts": 3,
+            "Priority": 0
+        }]
 Default_Shift_Pattern = {
     "Employee_Count":"5",
     "Employee1":"10:00-17:00",
@@ -16,6 +37,7 @@ Default_Shift_Pattern = {
 
 default_employee_base = {
     'NAME': "Steve",
+    'DC_ID':'qwer',
     'ROLE': "employee",
     'Desired_Shift_Counts':"0",
     'Priority':'-1' # 0 is standard, -1 is to use as least as possible. max out at 5. 
@@ -33,7 +55,7 @@ default_values = {
     },
     'TIME_SLOT_LIST':[],
     'MANAGER_LIST': [],
-    'EMPLOYEE_LIST':[],
+    'EMPLOYEE_LIST':Mock_Employee_List,
     'ROLES_LIST':roles_list,
     'SHIFT_PATTERNS':{
         'title':Default_Shift_Pattern
