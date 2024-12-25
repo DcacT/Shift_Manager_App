@@ -1,0 +1,488 @@
+{
+    "../": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21": {
+        "python_files": [
+            "main.py",
+            "__init__.py"
+        ],
+        "functions": {
+            "main.py": [
+                "onStart",
+                "handle_employee",
+                "handle_commands"
+            ],
+            "__init__.py": []
+        }
+    },
+    "../12_21\\.git": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\hooks": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\info": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\logs": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\logs\\refs": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\logs\\refs\\heads": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\05": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\0b": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\0d": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\10": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\12": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\13": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\15": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\17": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\18": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\1c": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\20": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\24": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\25": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\29": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\30": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\33": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\34": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\3d": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\3e": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\45": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\48": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\49": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\4e": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\5a": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\5c": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\60": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\64": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\67": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\6a": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\6c": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\6e": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\6f": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\74": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\76": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\7d": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\7f": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\83": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\86": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\8d": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\8e": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\90": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\91": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\92": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\94": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\9b": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\9d": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\9e": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\a3": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\a4": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\ab": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\ae": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\af": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\b1": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\b2": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\b7": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\b8": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\bd": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\c1": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\c3": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\ca": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\cd": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\d2": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\dd": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\df": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\e5": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\e6": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\ea": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\eb": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\ec": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\ee": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\f0": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\f1": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\f5": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\f7": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\f8": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\fa": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\fe": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\info": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\objects\\pack": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\refs": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\refs\\heads": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\.git\\refs\\tags": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\catalog": {
+        "python_files": [
+            "catalog.py"
+        ],
+        "functions": {
+            "catalog.py": [
+                "get_python_functions",
+                "list_dir_structure"
+            ]
+        }
+    },
+    "../12_21\\helpers": {
+        "python_files": [
+            "__init__.py"
+        ],
+        "functions": {
+            "__init__.py": []
+        }
+    },
+    "../12_21\\helpers\\config": {
+        "python_files": [
+            "config_actions.py",
+            "employee_action.py",
+            "util.py",
+            "__init__.py"
+        ],
+        "functions": {
+            "config_actions.py": [
+                "check_cfg",
+                "read_cfg",
+                "write_cfg",
+                "setup_cfg",
+                "generate_time_slot_list"
+            ],
+            "employee_action.py": [
+                "show_employee",
+                "create_employee",
+                "delete_employee",
+                "edit_employee"
+            ],
+            "util.py": [
+                "get_last_date",
+                "generate_file_name"
+            ],
+            "__init__.py": [
+                "get_cfg_path"
+            ]
+        }
+    },
+    "../12_21\\helpers\\config\\__pycache__": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\helpers\\csv": {
+        "python_files": [
+            "availability_actions.py",
+            "shift_actions.py",
+            "__init__.py"
+        ],
+        "functions": {
+            "availability_actions.py": [
+                "read_csv_to_list",
+                "get_next_availability_sheet_name",
+                "get_this_availability_sheet_name",
+                "generate_empty_availability_data",
+                "write_availability_data",
+                "read_availability_data",
+                "get_employee_index",
+                "get_time_index",
+                "modify_availability_data",
+                "range_modify_availability_data"
+            ],
+            "shift_actions.py": [],
+            "__init__.py": []
+        }
+    },
+    "../12_21\\helpers\\csv\\__pycache__": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\helpers\\discord": {
+        "python_files": [
+            "discord_command_actions.py",
+            "__init__.py"
+        ],
+        "functions": {
+            "discord_command_actions.py": [],
+            "__init__.py": []
+        }
+    },
+    "../12_21\\helpers\\shift": {
+        "python_files": [
+            "shift_action.py",
+            "shift_pattern_action.py"
+        ],
+        "functions": {
+            "shift_action.py": [],
+            "shift_pattern_action.py": []
+        }
+    },
+    "../12_21\\helpers\\__pycache__": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\Shift_Manager_App": {
+        "python_files": [],
+        "functions": {}
+    },
+    "../12_21\\__pycache__": {
+        "python_files": [],
+        "functions": {}
+    }
+}

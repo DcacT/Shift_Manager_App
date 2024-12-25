@@ -203,17 +203,14 @@
         "SUN_23:00"
     ],
     "MANAGER_LIST": [],
-    "EMPLOYEE_LIST": [
-        "Steve",
-        "Steven"
-    ],
-    "roles": [
+    "EMPLOYEE_LIST": [],
+    "ROLES_LIST": [
         "inactive",
         "employee",
         "manager",
         "owner"
     ],
-    "Shift_Patterns": {
+    "SHIFT_PATTERNS": {
         "title": {
             "Employee_Count": "5",
             "Employee1": "10:00-17:00",
