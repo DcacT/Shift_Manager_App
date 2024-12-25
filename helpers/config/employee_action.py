@@ -32,11 +32,10 @@ def create_employee(employee):
         show_employee()
     return
 
-def delete_employee(NAME):
+def delete_employee(NAME = None, DC_ID = None):
     EMPLOYEE_LIST = config_actions.read_cfg(key = 'EMPLOYEE_LIST')
-    del_action = False
     if NAME is not None:
-        index, employee = next(((i, e) for i, e in enumerate(EMPLOYEE_LIST) if e["NAME"] == name), None)
+        index, employee = next(((i, e) for i, e in enumerate(EMPLOYEE_LIST) if e["NAME"] == NAME), None)
         if employee is not None:
             del EMPLOYEE_LIST[index]
             config_actions.write_cfg(key='EMPLOYEE_LIST', val=EMPLOYEE_LIST)
@@ -45,8 +44,18 @@ def delete_employee(NAME):
             return True
         else:
             print('No employee found with name: ', NAME)
+    if DC_ID is not None:
+        index, employee = next(((i, e) for i, e in enumerate(EMPLOYEE_LIST) if e["DC_ID"] == DC_ID), None)
+        if employee is not None:
+            del EMPLOYEE_LIST[index]
+            config_actions.write_cfg(key='EMPLOYEE_LIST', val=EMPLOYEE_LIST)
+            print('employee deleted! ')
+            show_employee()
+            return True
+        else:
+            print('No employee found with ID: ', DC_ID)
             return False
-    print('Employee Name cannot be empty')
+    print('Employee Name or DC_ID cannot be empty')
     return False
 
 

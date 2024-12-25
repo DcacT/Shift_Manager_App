@@ -15,6 +15,10 @@ def get_python_functions(file_path):
 def list_dir_structure(base_dir):
     result = {}
     for root, dirs, files in os.walk(base_dir):
+        # Ignore .git directory or any git-related files
+        dirs[:] = [d for d in dirs if d != ".git"]
+        files = [f for f in files if not f.startswith(".git")]
+
         python_files = [f for f in files if f.endswith(".py")]
         result[root] = {
             "python_files": python_files,
@@ -27,7 +31,7 @@ if __name__ == "__main__":
     output_file = input("Enter the output JSON file path: ").strip()
 
     data = list_dir_structure(base_directory)
-    with open('catalogs.json', "w", encoding="utf-8") as json_file:
+    with open(output_file, "w", encoding="utf-8") as json_file:
         json.dump(data, json_file, indent=4)
 
     print(f"Directory structure and Python functions written to {output_file}")

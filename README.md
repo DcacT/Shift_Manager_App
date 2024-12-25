@@ -4,8 +4,17 @@ WIP
 TODO
 
 - availability management
-- cmd prompt actions 
+  - cmdline action [v]
+  - visualization [v]
+  - webapp []
+  - report []
+- cmd prompt actions
+  - availability []
+  - employee [v]
+  - shift []
+  
 - discord action
+- users action
 - visualization plotly
 - shift management 
 - visualization webapp
