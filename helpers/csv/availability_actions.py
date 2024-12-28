@@ -40,7 +40,6 @@ def generate_empty_availability_data(start_from_scratch = False):
     # generate column list
 
     AVAILABILITY_DATA = [TIME_SLOT_LIST[0]] + EMPLOYEE_LIST
-    print(AVAILABILITY_DATA)
     for t in TIME_SLOT_LIST[1:]:
         ROW = [t]
         
@@ -50,7 +49,6 @@ def generate_empty_availability_data(start_from_scratch = False):
             else:
                 print('TODO')
         AVAILABILITY_DATA.append(ROW)
-    # print(AVAILABILITY_DATA)
     return AVAILABILITY_DATA               
 
 def write_availability_data(data, file_name=None):
