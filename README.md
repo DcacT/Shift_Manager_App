@@ -6,6 +6,8 @@ TODO
 - availability management
   - cmdline action [v]
   - visualization [v]
+    - combined [v]
+    - seperate[v]
   - webapp []
   - report []
 - cmd prompt actions

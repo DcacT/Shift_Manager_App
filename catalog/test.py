@@ -182,9 +182,6 @@ TIME_SLOT_LIST = ["EMPLOYEE",
         "SUN_22:30",
         "SUN_23:00"
     ]
-a = [A[0:3] for A in TIME_SLOT_LIST[1:]]
-b = [B for B in a if B in a]
-b = [a[0]]
-for A in TIME_SLOT_LIST[1:]:
-    b = b+[A[0:3]] if A[0:3] != b[-1] else b
+
+b = list(set(s[:3] for s in TIME_SLOT_LIST[1:]))
 print(b)
