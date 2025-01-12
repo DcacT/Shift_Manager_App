@@ -7,17 +7,20 @@ from ..helpers import config
 # 2 process location
 # 3 process authority of command 
 # 4 process action
-PROCESSING_CMD = None
 AWAITING_CMD_LIST = []
 SAMPLE_CMD = {'cmd_msg': 123, 'cmd_reply': 321}
 
-def update_cmd_list(message = discord.message):
+async def update_cmd_list(message = discord.message):
     if message != None:
         reply = message.reply('initializing process')
         new_cmd = {'cmd_msg': message.id, 'cmd_reply': reply.id}
         AWAITING_CMD_LIST.append(new_cmd)
-    
-    process_command(AWAITING_CMD_LIST[0].cmd_msg)
+    for cmd in AWAITING_CMD_LIST[1:]:
+        await cmd.cmd_reply
+
+    await AWAITING_CMD_LIST[0].cmd_msg.edit(content="Processing")
+    await process_command(AWAITING_CMD_LIST[0].cmd_msg)
+
     return
 def process_command(message = discord.message):
     update_cmd_list(message)

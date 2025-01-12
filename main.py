@@ -3,7 +3,7 @@ from .helpers.config import config_actions, employee_action
 from .helpers.csv import availability_actions, visualizer
 
 def onStart():
-    config_actions.setup_cfg()
+    # config_actions.setup_cfg()
     print(visualizer.get_list_of_days())
     data = availability_actions.generate_empty_availability_data(start_from_scratch=True)
     # availability_actions.write_availability_data(data, 'new_sample.csv')

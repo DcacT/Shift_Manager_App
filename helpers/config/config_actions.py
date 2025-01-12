@@ -61,7 +61,18 @@ default_values = {
         'title':Default_Shift_Pattern
     },
     'WEEKS_PER_SCHEDULE': 1,
-    'NEXT_SCHEDULE_DATE':'2024_12_23'
+    'NEXT_SCHEDULE_DATE':'2024_12_23',
+    'DISCORD_INFO':{
+        'BOT_TOKEN': '',
+        'GUILD_ID': '',
+        'CHANNEL_ID_LIST':{
+            'COMMAND_CHANNEL':'',
+            'SCHEDULE_CHANNE:':'',
+            'AVAILABILITY_CHANNEL:':'',
+            'INVENTORY_CHANNEL':''
+        }
+    }
+    
 }
 
 
